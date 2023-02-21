@@ -1,0 +1,9 @@
+---
+# disable_ssh_socket/tasks/main.yml
+
+- name: 'Stop, disable and mask the ssh.socket'
+  ansible.builtin.service:
+    name: 'ssh.socket'
+    state: 'stopped'
+    enabled: false
+    masked: true
